@@ -1,0 +1,27 @@
+
+@media (min-width: 772px) {
+    div {
+        width: 45%;
+        /* Additional styling for divs */
+        max-width: none;
+        margin: 0 auto;
+        float: left;
+        clear: none;
+    }
+    
+    img {
+        max-height: 30vh;
+    }
+}
+
+
+@media (min-width: 998px) {
+    div {
+        width: 30%;
+        
+        max-height: none;
+        margin: 0;
+        float: none;
+        clear: both;
+    }
+}
