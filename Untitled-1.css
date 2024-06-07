@@ -1,27 +1,89 @@
 
-@media (min-width: 772px) {
-    div {
-        width: 45%;
-        /* Additional styling for divs */
-        max-width: none;
-        margin: 0 auto;
-        float: left;
-        clear: none;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+@media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
-    img {
-        max-height: 30vh;
+
+    figure:last-child {
+        grid-column: span 2;
+    }
+
+    figure img {
+        border-radius: 50%;
     }
 }
 
 
-@media (min-width: 998px) {
-    div {
-        width: 30%;
-        
-        max-height: none;
-        margin: 0;
-        float: none;
-        clear: both;
+@media screen and (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+
+    figure img {
+        border-radius: 0;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    body {
+        scroll-behavior: auto;
+    }
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    figure {
+        background-color: #333;
+        border: 1px solid #000;
+    }
+
+    figcaption {
+        color: #ffff00;
     }
 }
